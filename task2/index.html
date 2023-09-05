@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>task 1</title>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a href = "http://kubsu.ru">абсолютная гиперссылка на главную страницу сайта kubsu.ru</a>
+            </li>
+            <li>
+                <a href = "https://kubsu.ru">абсолютная гиперссылка на главную страницу сайта kubsu.ru https</a>
+            </li>
+            <li>
+                <a href="https://kubsu.ru">
+                    <img src = "image.jpg" width="100" height="100" alt="im">
+                </a>
+            </li>
+            <li>
+                <a href = "/pp.html">Сокращённая ссылка</a>
+            </li>
+            <li>
+                <a href = "/index.html">Сокращённая ссылка на глав страницу</a>
+            </li>
+            <li>
+                <a href="#lorem1">На фрагмент</a>
+            </li>
+            <li>
+                <a href="/index.html?name=Kirill&age=19&region=krd">ссылка с параметрами</a>
+            </li>
+            <li>
+                <a href="/pp.html?id=10">Ссылку с параметром id</a>
+            </li>
+            <li>
+                <a href="/pp.html">Относительная ссылка в текущей директории</a>
+            </li>
+            <li>
+                <a href="/about/about.html">относительная на страницу в каталоге about</a>
+            </li>
+            <li>
+                <a href="/about/about.html">относительную на страницу в каталоге уровнем выше текущего</a>
+            </li>
+            <li>
+                <a href="/about/employees/employees.html">относительную на страницу в каталоге двумя уровнями выше</a>
+            </li>
+            <li>
+                <a href="#lorem1">Контекстная ссылка</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Years_of_Lead_(Italy)#Timeline_of_events">ссылка на фрагмент страницы стороннего сайта</a>
+            </li>
+            <li>
+                <img src="image.jpg" usemap="#image-map" width="300" height="300" alt="im">
+                <map name="image-map">
+                    <area shape="rect" coords="0,0,100,100" href="http://google.com" alt="0">
+                    <area shape="circle" coords="150,150,50" href="http://yandex.ru" alt="0">
+                </map>
+            </li>
+            <li>
+                <a href="">Ссылка с пустым href</a>
+            </li>
+            <li>
+                <a>Ссылка без href</a>
+            </li>
+            <li>
+                <a href="#" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a>
+            </li>
+            <li>
+                <a href="#" rel="noindex">Запрещенная для индексации поисковиками ссылка</a>
+            </li>
+        </ul>
+        <ol>
+            <li>title</li>
+            <li>title</li>
+            <li>title</li>
+            <li>title</li>
+        </ol>
+        <a href="https://ftp.gnu.org/gnu/emacs/emacs-22.1.tar.gz">Ссылка на файл FTP без авторизации через http(оно работает)</a><br>
+        <a href="ftp://ftp.gnu.org/gnu/emacs/emacs-22.1.tar.gz">Ссылка на файл FTP без авторизации</a><br>
+        <a href="ftp://user:password@ftp.gnu.org/gnu/emacs/emacs-22.1.tar.gz">Ссылка на файл FTP с авторизацией(ОНА НЕ БУДЕТ РАБОТАТЬ, ибо авторизация не пройдёт)</a><br>
+        <h1>Форма</h1>
+        <form action="/ " method="post">
+            <label for="name">ФИО:</label><br>
+            <input type="text" id="name"><br>
+            <label for="number">Телефон:</label><br>
+            <input type="tel" id="number"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email"><br>
+            <label for="birthday">День рождения:</label><br>
+            <input type="date" id="birthday"><br>
+            <label>Пол:</label><br>
+            <input type="radio" name="sex">Муж.<br>
+            <input type="radio" name="sex">Жен.<br>
+            <select name="fav_lang">
+                <option value="c++">C++</option>
+                <option value="rust">Rust</option>
+                <option value="haskell">Haskell</option>
+                <option value="python">Python</option>
+                <option value="elixir">Elixir</option>
+                <option value="scala">Scala</option>
+            </select><br>
+            <label for="bio">Биография:</label><br>
+            <textarea name="bio" cols="30" rows="10" id="bio">
+
+            </textarea><br>
+            <label for="agreement">
+                с контрактом ознакомлен(а)
+            </label><br>
+            <input type="checkbox" name="agreement" id="agreement"><br>
+            <button type="submit">Сохранить</button>
+        </form>
+        <p id="lorem1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum inventore tempora natus dignissimos odio odit sint laboriosam voluptate? Quidem laboriosam eius libero. Magni, similique cum earum dignissimos maxime expedita sit.</p>
+
+    </body>
+</html>
