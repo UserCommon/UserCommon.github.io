@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    color: #0F0A0A;
+}
+body {
+    background-color: #F5EFED;
+}
+
+.header {
+    min-height: 80px;
+    width: 100%;
+    display: block;
+    background-color: #F26419;
+    align-items: center;
+
+}
+
+.header-content {
+    margin: 0 auto;
+    padding: 1% 1% 0 0  ;
+    max-width: 960px;
+}
+
+.name {
+    padding-top: 10px;
+    font-size: xx-large;
+    display: inline;
+}
+
+.footer {
+    min-height: 60px;
+    width: 100%;
+    display: block;
+    background-color: #F26419;
+}
