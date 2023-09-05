@@ -1,5 +1,6 @@
 
-<html>
+<!DOCTYPE html>
+<html lang="html">
     <head>
         <title>task 1</title>
     </head>
@@ -13,7 +14,7 @@
             </li>
             <li>
                 <a href="https://kubsu.ru">
-                    <img src = "image.jpg" width="100" height="100"/>
+                    <img src = "image.jpg" width="100" height="100" alt="im">
                 </a>
             </li>
             <li>
@@ -50,10 +51,10 @@
                 <a href="https://en.wikipedia.org/wiki/Years_of_Lead_(Italy)#Timeline_of_events">ссылка на фрагмент страницы стороннего сайта</a>
             </li>
             <li>
-                <img src="image.jpg" usemap="#image-map" width="300" height="300">
+                <img src="image.jpg" usemap="#image-map" width="300" height="300" alt="im">
                 <map name="image-map">
-                    <area shape="rect" coords="0,0,100,100" href="http://google.com">
-                    <area shape="circle" coords="150,150,50" href="http://yandex.ru">
+                    <area shape="rect" coords="0,0,100,100" href="http://google.com" alt="0">
+                    <area shape="circle" coords="150,150,50" href="http://yandex.ru" alt="0">
                 </map>
             </li>
             <li>
@@ -79,18 +80,18 @@
         <a href="ftp://ftp.gnu.org/gnu/emacs/emacs-22.1.tar.gz">Ссылка на файл FTP без авторизации</a><br>
         <a href="ftp://user:password@ftp.gnu.org/gnu/emacs/emacs-22.1.tar.gz">Ссылка на файл FTP с авторизацией(ОНА НЕ БУДЕТ РАБОТАТЬ, ибо авторизация не пройдёт)</a><br>
         <h1>Форма</h1>
-        <form method="post">
+        <form action="/" method="post">
             <label for="name">ФИО:</label><br>
-            <input type="text"><br>
+            <input type="text" id="name"><br>
             <label for="number">Телефон:</label><br>
-            <input type="tel"><br>
+            <input type="tel" id="number"><br>
             <label for="email">Email:</label><br>
-            <input type="email"><br>
-            <label for="birthdat">День рождения:</label><br>
-            <input type="date"><br>
+            <input type="email" id="email"><br>
+            <label for="birthday">День рождения:</label><br>
+            <input type="date" id="birthday"><br>
             <label for="sex">Пол:</label><br>
-            <input type="radio" name="sex">Муж.<br>
-            <input type="radio" name="sex">Жен.<br>
+            <input type="radio" name="sex" id="sex">Муж.<br>
+            <input type="radio" name="sex" id="sex">Жен.<br>
             <select name="fav_lang">
                 <option value="c++">C++</option>
                 <option value="rust">Rust</option>
@@ -100,14 +101,14 @@
                 <option value="scala">Scala</option>
             </select><br>
             <label for="bio">Биография:</label><br>
-            <textarea name="bio" cols="30" rows="10">
+            <textarea name="bio" cols="30" rows="10" id="bio">
 
             </textarea><br>
             <label for="agreement">
                 с контрактом ознакомлен(а)
             </label><br>
-            <input type="checkbox" name="agreement"><br>
-            <button hre>Сохранить</button>
+            <input type="checkbox" name="agreement" id="agreement"><br>
+            <button type="submit">Сохранить</button>
         </form>
         <p id="lorem1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum inventore tempora natus dignissimos odio odit sint laboriosam voluptate? Quidem laboriosam eius libero. Magni, similique cum earum dignissimos maxime expedita sit.</p>
 
