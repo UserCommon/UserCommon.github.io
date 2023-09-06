@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    color: #0F0A0A;
+}
+body {
+    background-color: #F5EFED;
+}
+
+.header {
+    min-height: 80px;
+    width: 100%;
+    display: block;
+    background-color: #F26419;
+    align-items: center;
+}
+
+.header-content {
+    margin: auto;
+    padding: 1%;
+    max-width: 960px;
+}
+
+.page-nav {
+    display: inline;
+    float: right;
+    font-size: x-large;
+}
+
+.name {
+    font-size: xx-large;
+    display: inline;
+}
+
+.copyright {
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.content-block {
+    margin: 1%;
+    padding: 1%;
+    background-color: #7CB518;
+}
+
+.even {
+    background-color: burlywood;
+}
+
+.odd {
+    background-color: coral;
+}
+
+.footer {
+    min-height: 60px;
+    width: 100%;
+    display: block;
+    background-color: #F26419;
+}
