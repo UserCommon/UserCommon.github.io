@@ -534,6 +534,13 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.content-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  justify-content: space-around;
+}
+
 .content-block {
   grid-column: span 4 / span 4;
   grid-column-start: 2;
@@ -545,17 +552,11 @@ video {
   padding: 1.25rem;
 }
 
-.content-grid {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  align-items: center;
-  justify-content: center;
-}
-
 .content {
   grid-column: span 4 / span 4;
   grid-column-start: 2;
+  display: grid;
+  justify-content: space-around;
 }
 
 .odd {
@@ -584,16 +585,16 @@ video {
   margin: auto;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 
 .block {

@@ -2,19 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
+    .content-grid { 
+        @apply grid grid-cols-6 grid-flow-col justify-around ;
+    }
+
     .content-block {
         @apply col-start-2 col-span-4
         bg-lime-500 rounded-lg
-        p-3 grid grid-cols-6
-        p-5;
+        grid grid-cols-6 p-5;
     }
 
-    .content-grid { 
-        @apply grid grid-cols-6 grid-flow-col justify-center items-center;
-    }
+    
 
     .content {
-        @apply col-span-4 col-start-2;
+        @apply col-start-2 col-span-4 grid justify-around;
     }
 
     .odd {
