@@ -1,2 +1,2 @@
 # tailwind required
-npx tailwindcss -i ./styles/new-style.css -o ./styles/output.css --watch
+npx tailwindcss -i ./styles/styles.css -o ./styles/output.css --watch

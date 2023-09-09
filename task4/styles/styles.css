@@ -1,151 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-
-* {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    color: #0F0A0A;
-}
-
-body {
-    background-color: #F5EFED;
-}
-
-.header {
-    background-color: #F26419;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    min-height: 80px;
-    
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 2vw;
-}
-
-.name {
-    font-size: xx-large;
-    display: inline;
-}
-
-
-.footer {
-    width: 100vw;
-    background-color: #F26419;
-}
-
-.flex-box {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-
-    gap: 3vh;
-    align-items: center;
-}
-
-.content-block {
-    background-color: #7CB518;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70vw;
-    border-radius: 10px;
-    padding: 3%;
-}
-
-.even {
-    background-color: burlywood;
-}
-
-.odd {
-    background-color: coral;
-}
-
-.links {
-    font-size: x-large;
-}
-
-.menu-links li{
-    display: block;
-
-    list-style-type: none;
-    font-size: x-large;
-}
-
-.flex-item-2 {
-    order: 1;
-}
-
-.flex-item-1 {
-    order: 2;
-}
-
-.flex-item-3 {
-    order: 3;
-}
-
-.header-super-item-1 {
-    width: 70vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1vh;
-}
-
-@media screen and (min-width: 960px) {
-    .header-super-item-1 {
-        all: unset;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .content-block {
+        @apply col-start-2 col-span-4
+        bg-lime-500 rounded-lg
+        p-3 grid grid-cols-6
+        mt-3 mb-3 p-5;
     }
 
-    .flex-item-2 {
-        order: 2;
+    .content-grid {
+        @apply grid grid-cols-6 grid-flow-col justify-center;
     }
 
-    .flex-item-1 {
-        order: 1;
+    .content {
+        @apply col-span-4 col-start-2;
     }
 
-    .flex-item-3 {
-        order: 3;
-    }
-    
-
-    .header {
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
+    .odd {
+        @apply bg-amber-400;
     }
 
-    .menu-links li{
-        display: inline;
+    .even {
+        @apply bg-lime-300; 
     }
-
-    .links {
-        font-size: medium;
-    }
-    
-    
-    
-    .page-nav {
-        display: inline;
-        float: right;
-        font-size: x-large;
-    }
-    
-    
-    
-    .copyright {
-        padding-top: 1%;
-        padding-left: 1%;
-    }
-    
-    
-    .footer {
-        min-height: 60px;
-    }
-    
 }
-
-
-
