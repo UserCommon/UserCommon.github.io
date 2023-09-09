@@ -4,7 +4,6 @@
         <title>task 4</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="stylesheet" href="styles/styles.css"> -->
-        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="styles/output.css">
     </head>
 
@@ -14,7 +13,7 @@
                     <img src="static/logo.png" alt="logo" class="inline">
                     <div class="name text-2xl inline">Название</div>
                 </div>
-                <nav class="text-2xl mt-4 md: mt-0">
+                <nav class="text-2xl mt-4 md:mt-0">
                     <ul class="gap-3 block md:inline-flex">
                         <li>
                             <a href="#form">Форма</a>
@@ -33,7 +32,7 @@
         </header>
 
         <div class="content-grid grid grid-cols-6 grid-flow-col justify-center">
-            <div class="content-block">
+            <div class="content-block order-2 md:order-1">
                 <div class="content">
                     <h1 class="text-2xl text-center">Список ссылок</h1>
                     <ul class="text-2xl space-y-5 md:text-lg md:space-y-2">
@@ -113,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="content-block">
+            <div class="content-block order-1 md:order-2">
                 <div class="content">
                     <table class="table m-auto" id="table">
                         <caption>
@@ -191,22 +190,22 @@
                 </div>
             </div>
 
-            <div class="content-block">
-                <div class="content">
+            <div class="content-block order-3">
+                <div class="content m-auto">
                     <h2 class="text-center">Форма</h2>
-                    <form action="/ " method="post">
+                    <form action="/" method="post" >
                         <label for="name">ФИО:</label><br>
-                        <input type="text" id="name"><br>
+                        <input class="w-full" type="text" id="name"><br>
                         <label for="number">Телефон:</label><br>
-                        <input type="tel" id="number"><br>
+                        <input class="w-full" type="tel" id="number"><br>
                         <label for="email">Email:</label><br>
-                        <input type="email" id="email"><br>
+                        <input class="w-full" type="email" id="email"><br>
                         <label for="birthday">День рождения:</label><br>
-                        <input type="date" id="birthday"><br>
+                        <input class="w-full" type="date" id="birthday"><br>
                         <label>Пол:</label><br>
-                        <input type="radio" name="sex">Муж.<br>
-                        <input type="radio" name="sex">Жен.<br>
-                        <select name="fav_lang">
+                        <input class="" type="radio" name="sex">Муж.<br>
+                        <input class="" type="radio" name="sex">Жен.<br>
+                        <select class="w-full" name="fav_lang">
                             <option value="c++">C++</option>
                             <option value="rust">Rust</option>
                             <option value="haskell">Haskell</option>
@@ -214,15 +213,15 @@
                             <option value="elixir">Elixir</option>
                             <option value="scala">Scala</option>
                         </select><br>
-                        <label for="bio">Биография:</label><br>
-                        <textarea name="bio" cols="30" rows="10" id="bio">
+                        <label for="bio" class="">Биография:</label><br>
+                        <textarea class="w-full resize-none" name="bio" cols="30" rows="10" id="bio">
             
                         </textarea><br>
                         <label for="agreement">
                             с контрактом ознакомлен(а)
-                        </label><br>
+                        </label>
                         <input type="checkbox" name="agreement" id="agreement"><br>
-                        <button type="submit">Сохранить</button>
+                        <button class="bg-red-400 p-2 rounded-lg" type="submit">Сохранить</button>
                     </form>
                 </div>
             </div>
