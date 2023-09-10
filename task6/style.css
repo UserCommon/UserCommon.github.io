@@ -35,5 +35,19 @@ button {
 }
 
 .service_calculator {
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radio_choice {
+    display: inline;
+}
+
+.service_choice {
+    display: flex;
+    gap: 10vw;
+    list-style: none;
+    justify-content: space-around;
 }

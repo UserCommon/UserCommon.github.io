@@ -11,7 +11,37 @@
     <main>
         <div class="flexbox">
             <section class="service_calculator">
-                <h1>Калькулятор услуг</h1>
+                <h1>Калькулятор услуги</h1>
+                <div class="prices_info">
+                    <ul>
+                        <li>Бургер - 300 рублей</li>
+                        <li>Шаурма - 200 рублей (сырный лаваш +50 рублей)</li>
+                        <li>Картофель фри - 100 рублей (посыпать солью +20 рублей)</li>
+                    </ul>
+                </div>
+                <div class="calculator">
+                    <label for="amount_service">Количество:</label>
+                    <input id="amount_service" type="text">
+                    <ul class="service_choice">
+                        <li><input name="r" class="radio-choice" type="radio" value="Бургер" checked>Бургер</li>
+                        <li><input name="r" class="radio-choice" type="radio" value="Шаурма">Шаурма</li>
+                        <li><input name="r" class="radio-choice" type="radio" value="Картофель фри">Картофель фри</li>
+                    </ul>
+                    <div id="add" style="display: none;">
+                        <label for="additional">Лаваш:</label>
+                        <select name="additional" id="additional">
+                            <option value="Сырный лаваш">Сырный</option>
+                            <option value="Обычный лаваш">Обычный</option>
+                        </select>
+                    </div>
+                    <div id="check" style="display: none;">
+                        <label id="check_label" value="Посыпать солью">Посыпать солью.</label>
+                        <input type="checkbox">
+                    </div>
+                    <div id="result">
+                        0
+                    </div>
+                </div>
             </section>
             <section class="product_calculator">
                 <h1>Калькулятор из 5 задания</h1>
@@ -41,5 +71,6 @@
         </div>
     </main>
     <script src="main.js" defer></script>
+    <script src="service_calc.js" defer></script>
 </body>
 </html>
