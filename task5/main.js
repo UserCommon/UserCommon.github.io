@@ -7,32 +7,26 @@ const prices = {
 
 let setCalculation = (value) => {
     let domAns = document.getElementById("result")
-    if(validateInput(value)) {
-        domAns.replaceChildren(`Стоимость: ${value}`);
-    } else {
-        domAns.replaceChildren(`Недопустимое значение!`);
-    }
+    domAns.replaceChildren(`${value}`);
 };
 
-let getCalculation = () => {
-    let amount = document.getElementById("amount").value;
-    let select = document.getElementById("choice").value;
-
-    return prices[select] * Number(amount);
+let getCalculation = (amount, select) => {
+    if(validateInput(amount))
+        return "Стоимость: " + String(prices[select] * Number(amount));
+    return "Недопустимое значение!";
 };
 
 let onSubmit = () => {
-    let val = getCalculation();
+    let amount = document.getElementById("amount").value;
+    let select = document.getElementById("choice").value;
+    let val = getCalculation(amount, select);
     setCalculation(val);
 };
 
 let validateInput = (obj) => {
     const regex = /^[0-9]+$/;
 
-    if(!regex.test(obj)) {
-        return false;
-    }
-    return true;
+    return regex.test(obj);
 };
 
 document.addEventListener("DOMContentLoaded", (event) => {
