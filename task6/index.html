@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Task 6</title>
+</head>
+<body>
+    <main>
+        <div class="flexbox">
+            <section class="service_calculator">
+                <h1>Калькулятор услуг</h1>
+            </section>
+            <section class="product_calculator">
+                <h1>Калькулятор из 5 задания</h1>
+                <div class="prices_info">
+                    <ul>
+                        <li>Арбуз -  100 рублей</li>
+                        <li>Дыня  -  87  рублей</li>
+                        <li>Банан -  70 рублей</li>
+                        <li>Яблоко - 30 рублей</li>
+
+                    </ul>
+                </div>
+                <div class="calculator">
+                    <label for="amount">Количество товара:</label>
+                    <input id="amount" type="text" name="product_amount">
+                    <label for="choice">Выберите товар:</label>
+                    <select name="choice" id="choice">
+                        <option value="Арбуз">Арбуз</option>
+                        <option value="Дыня">Дыня</option>
+                        <option value="Банан">Банан</option>
+                        <option value="Яблоко">Яблоко</option>
+                    </select>
+                    <button id="calculate">Просчитать</button>
+                    <div id="result">Стоимость: </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="main.js" defer></script>
+</body>
+</html>
