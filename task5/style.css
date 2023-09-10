@@ -1,0 +1,28 @@
+label, input, select {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    margin-top: 1vh;
+}
+
+.calculator {
+    width: 30vw;
+    background-color: palevioletred;
+    padding: 5vb;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
