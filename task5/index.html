@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <section class="flexbox">
+        <div class="flexbox">
             <div class="prices_info">
                 <ul>
                     <li>Арбуз -  100 рублей</li>
@@ -20,10 +20,10 @@
                 </ul>
             </div>
             <div class="calculator">
-                <label for="product_amount">Количество товара:</label>
+                <label for="amount">Количество товара:</label>
                 <input id="amount" type="text" name="product_amount">
-                <label for="product_choice">Выберите товар:</label>
-                <select name="product_choice" id="choice">
+                <label for="choice">Выберите товар:</label>
+                <select name="choice" id="choice">
                     <option value="Арбуз">Арбуз</option>
                     <option value="Дыня">Дыня</option>
                     <option value="Банан">Банан</option>
@@ -32,7 +32,7 @@
                 <button id="calculate">Просчитать</button>
                 <div id="result">Стоимость: </div>
             </div>
-        </section>
+        </div>
     </main>
 </body>
 
