@@ -10,20 +10,9 @@ const additional_prices = {
 };
 
 const salt_price = {
-    true: 20,
-    false: 0
+    "true": 20,
+    "false": 0
 };
-
-
-function calculate(food_type, additional_type, amount) {
-    if(/^[0-9]+$/.test(amount))
-        return `Итого: ${String((food_prices[food_type] + additional_prices[additional_type]) * amount)}`
-    return "Ошибка: Недопустимое значение"
-}
-
-function changeValue(value) {
-    document.getElementById("result").replaceChildren(value);
-}
 
 function updatePrice() {
     let VALUE = 0;
@@ -44,29 +33,44 @@ function updatePrice() {
     let sel = document.getElementById("add");
     sel.style.display = (radio_val == "Шаурма") ? "block" : "none";
     let selection = document.getElementById("additional");
-    let select = selection[0];
 
-    VALUE += additional_prices[select.value];
+    VALUE += additional_prices[selection.value];
 
     let check = document.getElementById("check");
     check.style.display = (radio_val == "Картофель фри" ? "block" : "none");
 
-    
+    document.getElementById("checkbox").checked ? VALUE += 20 : null; 
 
-    console.log(select);
-    console.log(VALUE)
+    let input = document.getElementById("amount_service");
+    (input.value !== undefined) ?
+        /^[0-9]+$/.test(input.value) ? VALUE *= Number(input.value) : null : null;
+
+    document.getElementById("result_service").innerHTML = `${VALUE} Рублей`;
+}
+
+function reset() {
+    document.getElementById("additional").value = "Обычный лаваш";
+    document.getElementById("checkbox").checked = false;
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
     console.log("DOM loaded");
+    reset();
     let radios = document.getElementsByName("r");
 
     let additionals = document.getElementById("add");
     let additional_select = document.getElementById("additional");
     let check = document.getElementById("check");
+    let input = document.getElementById("amount_service");
+
+    additional_select.value="Обычный лаваш";
 
     additionals.style.display = "none";
     check.style.display = "none";
+
+    input.addEventListener("input", () => {
+        updatePrice();
+    })
 
     additional_select.addEventListener("change", (event) => {
         let target = event.target;
@@ -75,7 +79,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     radios.forEach((radio) => {
+        radio.checked = false;
         radio.addEventListener("change", (event) => {
+            reset();
             let target = event.target;
             updatePrice();
         })
@@ -85,6 +91,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let target = event.target;
         console.log(target.value)
         updatePrice();
-   
     });
 });
