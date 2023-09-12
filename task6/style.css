@@ -47,7 +47,7 @@ button {
 
 .service_choice {
     display: flex;
-    gap: 10vw;
+    gap: 5vw;
     list-style: none;
     justify-content: space-around;
 }

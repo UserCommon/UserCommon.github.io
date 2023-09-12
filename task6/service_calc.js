@@ -73,8 +73,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
 
     additional_select.addEventListener("change", (event) => {
-        let target = event.target;
-        console.log(target.value);
         updatePrice();
     });
 
@@ -82,14 +80,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         radio.checked = false;
         radio.addEventListener("change", (event) => {
             reset();
-            let target = event.target;
             updatePrice();
         })
     });
 
     document.getElementById("checkbox").addEventListener("change", (event) => {
-        let target = event.target;
-        console.log(target.value)
         updatePrice();
     });
 });
