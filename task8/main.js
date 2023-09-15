@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((err) => {
             alert(err);
         })
+
+        history.back();
     });
 
     window.addEventListener("popstate", () => {
